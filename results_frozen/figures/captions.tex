@@ -1,0 +1,15 @@
+% fig1_lead1_by_issue_hour
+\caption{Next-hour error by issue hour. At issue hour $h$ the daily-batch policy serves lead $h{+}1$ of its morning invocation, so both curves predict the same absolute hour. Averaged over the day the error falls from 185.5 kWh under daily batching to 121.6 kWh under the proposed codec at 9.4 packets per node per day (34.4\%); the unconstrained-link bound is 113.4 kWh (38.9\%). The shaded band is the error the codec removes. It is zero at $h=0$ by construction, since both systems then hold the same window, and peaks near $h=15$ at approximately 148 kWh.}
+
+% fig2_rate_utility
+\caption{Rate-utility of the transmission policy. Accuracy cost is measured against the no-codec control, so the abscissa is the packet rate and zero is the control. The upper axis gives the corresponding deadband multiplier $\alpha$; the rate axis is logarithmic because the operating points are geometrically spaced. The dotted dotted line is the airtime budget of Section V, converted to this axis at the realised mean time-on-air and the dash-dot line the selected operating point, $\alpha$=0.7 at 9.4 packets per node per day. The first-order sensitivity bound of Section VI, $|d\hat{y}|_\infty \lesssim L_{restr}(h)\,\varepsilon$ over the perturbed columns only, has $L_{restr}$ growing from 0.66 at the resynchronisation hour to 1.11 at the end of the day; the measured degradation lies within it throughout.}
+
+% fig3_model_ablation
+\caption{Model ablation on a common packet-rate axis. Each family is swept over the same deadband schedule; the ordinate is the accuracy cost against the no-codec control, so lower is better and zero is the control. The dash-dot line marks the operating point selected in Section V, 9.4 packets per node per day.}
+
+% fig4_rate_distortion
+\caption{Rate-distortion of the codec. Reconstruction error is normalised by the MASE scale so that it is comparable across clients; the upper axis gives the deadband multiplier. The dotted line is the quantisation floor, $1.7\times10^{-3}$. The $\alpha=0$ row is omitted: reconstruction is then exact, the distortion is identically zero and cannot be placed on a logarithmic axis (24.8 packets per node per day).}
+
+% fig5_airtime_sf12
+\caption{Per-node airtime at SF12 as a fraction of the 30 s per day fair-use allowance, against the deadband multiplier. The dashed line is the allowance itself. The dotted line is the working budget that remains after a 20\% retry margin, 24 s per day. The star is the selected operating point, $\alpha$=0.7, at 39\% of the allowance.}
+

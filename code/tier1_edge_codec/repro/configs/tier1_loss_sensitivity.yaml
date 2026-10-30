@@ -1,0 +1,8 @@
+# eval.loss_sweep -- frame-loss sensitivity (Table I). Notebook cell 13.
+data_dir: ../tier2_data
+alpha: 1
+n_clients: 64
+configs: "0,1"
+pretrained: inputs/edge_pretrained.json
+k_mu: 5
+out: tier1_loss_sensitivity.json

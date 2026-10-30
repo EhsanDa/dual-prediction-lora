@@ -1,0 +1,4 @@
+# eval.figures -- the five figures and three CSV tables. Notebook cell 12.
+results_json: results/tier1_results.json
+sensitivity_json: results/tier1_sensitivity.json
+outdir: figures

@@ -1,0 +1,31 @@
+# Robustness study -- answers the reviewers' "single seed" objection.
+# See docs/reference/stochasticity.md for WHICH things are stochastic and why
+# the deterministic majority cannot be reseeded.
+#
+# Everything here writes under results/robustness/. Nothing overwrites the
+# reproduced baseline in results/, and nothing touches results_frozen/.
+data_dir: ../tier2_data
+checkpoint: ../dlinear.pt
+
+# --- stage 1: per-client vectors, for a bootstrap over the 321 meters -------
+# No new simulation: the vectors are already computed inside run_eval and
+# collapsed by distribution(). This just persists them.
+bootstrap_resamples: 10000
+bootstrap_ci: 95
+
+# --- stage 2: Table I over several packet-loss seeds ------------------------
+# 7 is the value hardcoded until 2026-09-14 and is listed FIRST so the paper's
+# own draw is always in the set.
+loss_seeds: "7,101,202,303,404"
+# All 321 clients -- the published table used a 64-client stratified subset.
+n_clients: 321
+# Only the primary configuration; sync_safe_1 is the robustness option, not
+# what Table I reports.
+configs: "0"
+alpha: 1.0
+losses: "0,0.01,0.05,0.1,0.2"
+k_mu: 5
+
+# --- stage 3: is alpha = 0.7 an artefact of one validation subsample? -------
+# 1 is the value hardcoded until 2026-09-14, listed first for the same reason.
+select_seeds: "1,11,22,33,44"

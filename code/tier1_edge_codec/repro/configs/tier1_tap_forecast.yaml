@@ -1,0 +1,5 @@
+# eval.tap_forecast_table -- weight-count ablation at forecast level
+# (Table VI), rebuilt from tier1_results.json. Notebook cell 14.
+results_json: results/tier1_results.json
+rates: "15,10,6"      # eval.tap_forecast_table default; cell 14 passed no --rates
+out: tier1_tap_forecast.json

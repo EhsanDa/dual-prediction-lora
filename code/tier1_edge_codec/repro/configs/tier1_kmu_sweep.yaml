@@ -1,0 +1,6 @@
+# eval.kmu_sweep -- the step-size choice. Notebook cell 8.
+data_dir: ../tier2_data
+pretrained: inputs/edge_pretrained.json
+alpha: 1.0
+k_mu: "4,5,6"
+out: tier1_kmu_sweep.json

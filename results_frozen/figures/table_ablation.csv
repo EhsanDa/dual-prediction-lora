@@ -1,0 +1,5 @@
+row,description,dMASE @ 15.0 pkt/day,dMASE @ 10.0 pkt/day,dMASE @ 9.37 pkt/day,dMASE @ 6.0 pkt/day
+A,Persistence + deadband (send-on-delta),0.00304,0.02263,0.0298,0.08932
+B,"Global fixed (pre-trained, adaptation off)",0.00179,0.00799,0.00924,0.0214
+C,Global + NLMS (proposed),0.00216,0.00699,0.00791,0.01834
+D,"Per-client ridge (CEILING, not deployable)",0.0022,0.00817,0.00944,0.0191

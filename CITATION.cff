@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Bounded-error dual prediction for fresh load forecasting over LoRa: code and artifacts"
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - given-names: Ehsan
+    family-names: Dabidian
+    affiliation: "Department of Computer Engineering, Ferdowsi University of Mashhad"
+  - given-names: Mohammadjavad
+    family-names: Amirzadeh Gero
+    affiliation: "Department of Computer Engineering, Ferdowsi University of Mashhad"
+  - given-names: Sara
+    family-names: Ershadi-Nasab
+    affiliation: "Department of Computer Engineering, Ferdowsi University of Mashhad"
+keywords:
+  - dual prediction
+  - LoRa
+  - short-term load forecasting
+  - fixed-point arithmetic
+  - adaptive filtering
+preferred-citation:
+  type: conference-paper
+  title: "A Bounded-Error Dual-Prediction Scheme for Freshness-Preserving Short-Term Load Forecasting over LoRa"
+  authors:
+    - given-names: Ehsan
+      family-names: Dabidian
+    - given-names: Mohammadjavad
+      family-names: Amirzadeh Gero
+    - given-names: Sara
+      family-names: Ershadi-Nasab
+  collection-title: "International Conference on Computer and Knowledge Engineering (ICCKE 2026)"
+  year: 2026

@@ -1,0 +1,7 @@
+# eval.sensitivity -- look-back sensitivity of the frozen forecaster.
+# Notebook cell 11. Read by figures.py.
+data_dir: ../tier2_data
+checkpoint: ../dlinear.pt
+split: test
+n_origins: 64
+out: tier1_sensitivity.json

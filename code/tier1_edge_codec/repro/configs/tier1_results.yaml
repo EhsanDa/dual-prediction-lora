@@ -1,0 +1,16 @@
+# eval.run_eval -- the core artifact. Every other table depends on it.
+# Notebook cell 9.
+data_dir: ../tier2_data
+checkpoint: ../dlinear.pt
+extra_taps: T7,T12          # requires _pretrain_cache/T7.json and T12.json
+pretrained: inputs/edge_pretrained.json
+per_client: inputs/edge_pretrained_per_client.npy
+k_mu: 5
+budget_sf: 12
+retry_margin: 0.20
+tolerance: 0.10
+margin_basis: min
+select_samples: 150000
+batch_size: 512
+device: cpu
+out: tier1_results.json

@@ -1,0 +1,16 @@
+# sim.pretrain -- the offline global ridge that initialises the edge predictor.
+#
+# PROVENANCE, established 2026-09-14 (card P1-02). The checked-in
+# inputs/edge_pretrained.json and inputs/edge_pretrained_per_client.npy had no
+# recorded producing invocation -- the notebook never runs sim/pretrain.py.
+# Running this script with these values reproduces both:
+#   * w_global_q                     IDENTICAL
+#   * edge_pretrained_per_client.npy BITWISE IDENTICAL
+#   * float fields                   agree to <= 2e-12 relative (BLAS summation
+#                                    order; every quantised weight is exact)
+#
+# WRITES TO results/, NOT to inputs/. The checked-in inputs are what the paper
+# used and are never overwritten by a repro run. Compare, do not replace.
+data_dir: ../tier2_data
+out: edge_pretrained.json
+per_client_out: edge_pretrained_per_client.npy

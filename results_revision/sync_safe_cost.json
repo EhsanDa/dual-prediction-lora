@@ -1,0 +1,129 @@
+{
+ "what": "sync_safe vs legacy at the reported configuration -- conference revision request A",
+ "store": "../tier2_data",
+ "k_mu": 5,
+ "channel": "lossless",
+ "reproduces_frozen_C@0.7": true,
+ "rows": {
+  "L@0.5": {
+   "mode": "legacy",
+   "alpha": 0.5,
+   "packets_per_day": 12.119840997612835,
+   "airtime_sf12_s": 14.468929510488472,
+   "mean_resync_bytes": 83.4494036780772,
+   "recon_mae_kwh": 23.977858037409188,
+   "dMASE_mean": 0.0039195808388051935,
+   "dMASE_p90": 0.006786484138220304,
+   "SS<0": 0.103125,
+   "lead1_mae_kwh": 117.78170395808989
+  },
+  "L@0.7": {
+   "mode": "legacy",
+   "alpha": 0.7,
+   "packets_per_day": 9.366974179698751,
+   "airtime_sf12_s": 11.74019982883386,
+   "mean_resync_bytes": 83.4494036780772,
+   "recon_mae_kwh": 38.58115834857667,
+   "dMASE_mean": 0.007912644493870432,
+   "dMASE_p90": 0.013809809680355346,
+   "SS<0": 0.109375,
+   "lead1_mae_kwh": 121.62668786273622
+  },
+  "L@1": {
+   "mode": "legacy",
+   "alpha": 1.0,
+   "packets_per_day": 6.573655330124301,
+   "airtime_sf12_s": 8.971372798932478,
+   "mean_resync_bytes": 83.4494036780772,
+   "recon_mae_kwh": 59.84093124965588,
+   "dMASE_mean": 0.015352636938006526,
+   "dMASE_p90": 0.02525705421177804,
+   "SS<0": 0.1125,
+   "lead1_mae_kwh": 128.1925982597492
+  },
+  "S@0.5": {
+   "mode": "sync_safe",
+   "alpha": 0.5,
+   "packets_per_day": 12.482713785878223,
+   "airtime_sf12_s": 14.828620630146352,
+   "mean_resync_bytes": 83.4494036780772,
+   "recon_mae_kwh": 23.820394199636656,
+   "dMASE_mean": 0.005431400377661005,
+   "dMASE_p90": 0.006735042798985291,
+   "SS<0": 0.10625,
+   "lead1_mae_kwh": 117.9893113054895
+  },
+  "S@0.7": {
+   "mode": "sync_safe",
+   "alpha": 0.7,
+   "packets_per_day": 9.886836334192605,
+   "airtime_sf12_s": 12.255503831957114,
+   "mean_resync_bytes": 83.4494036780772,
+   "recon_mae_kwh": 39.18772414699778,
+   "dMASE_mean": 0.011129169069865125,
+   "dMASE_p90": 0.01536008285947037,
+   "SS<0": 0.115625,
+   "lead1_mae_kwh": 122.49004050498434
+  },
+  "S@1": {
+   "mode": "sync_safe",
+   "alpha": 1.0,
+   "packets_per_day": 7.261422610918041,
+   "airtime_sf12_s": 9.65310973620822,
+   "mean_resync_bytes": 83.4494036780772,
+   "recon_mae_kwh": 63.17978896608237,
+   "dMASE_mean": 0.02345041782448103,
+   "dMASE_p90": 0.036346854566829755,
+   "SS<0": 0.125,
+   "lead1_mae_kwh": 131.51931821025892
+  },
+  "S@1.5": {
+   "mode": "sync_safe",
+   "alpha": 1.5,
+   "packets_per_day": 4.763176055448368,
+   "airtime_sf12_s": 7.176767806536905,
+   "mean_resync_bytes": 83.4494036780772,
+   "recon_mae_kwh": 104.44896124782187,
+   "dMASE_mean": 0.053519257659423516,
+   "dMASE_p90": 0.086246859497762,
+   "SS<0": 0.165625,
+   "lead1_mae_kwh": 150.69819841630894
+  }
+ },
+ "same_alpha": {
+  "0.5": {
+   "packets_ratio": 1.0299403918200627,
+   "airtime_ratio": 1.0248595529750242,
+   "recon_mae_ratio": 0.9934329481170977
+  },
+  "0.7": {
+   "packets_ratio": 1.055499475553222,
+   "airtime_ratio": 1.0438922684993546,
+   "recon_mae_ratio": 1.0157218140767277
+  },
+  "1": {
+   "packets_ratio": 1.1046247857933762,
+   "airtime_ratio": 1.075990258409155,
+   "recon_mae_ratio": 1.0557955507493157
+  }
+ },
+ "matched_airtime": {
+  "target_airtime_s": 11.74019982883386,
+  "dMASE": {
+   "legacy": 0.007912644493870432,
+   "sync_safe": 0.01356891822895775
+  },
+  "difference_sync_safe_minus_legacy": {
+   "point": 0.005656273735087317,
+   "ci95": [
+    0.0031502337800065417,
+    0.00877068982933228
+   ],
+   "n_draws": 10000,
+   "share_draws_positive": 1.0
+  }
+ },
+ "control_lead1_mae_kwh": 113.42308586247822,
+ "n_windows": 1675489,
+ "n_clients_scored": 320
+}

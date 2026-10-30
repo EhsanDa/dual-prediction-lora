@@ -1,0 +1,5 @@
+# eval.report_tables -- RESULTS.md, generated from the results JSON.
+# Notebook cell 10. Never edit RESULTS.md by hand.
+results_json: results/tier1_results.json
+sensitivity_json: results/tier1_sensitivity.json
+out: RESULTS.md

@@ -1,0 +1,8 @@
+{
+ "what": "daily batch = one frame per day carrying the day's 24 quantised values on the periodic wire format (sim/periodic.py, period 24), sizes measured from the actual values",
+ "nominal_frame_bytes": 54,
+ "measured_frame_bytes_mean": 48.5182329047864,
+ "packets_per_day_mean": 0.9999990467365981,
+ "airtime_per_day_s_sf12_mean": 2.3219979890353675,
+ "share_of_30s_allowance": 0.07739993296784559
+}

@@ -1,0 +1,17 @@
+# eval.tap_ablation -- the tap ladder (Table VII) and the writer of
+# _pretrain_cache/<id>.json, which eval.run_eval later reads.
+#
+# runner.ipynb ran this TWICE: cell 6 with --tap_sets T8,T12, then cell 7 with
+# the full ladder. Cell 7's output overwrote cell 6's artifact, and cell 6's
+# only lasting effect was to warm two cache entries that cell 7 would have
+# produced anyway. The full run alone therefore reproduces the artifact; see
+# docs/reference/provenance.md.
+data_dir: ../tier2_data
+tap_sets: all
+k_mu: 5
+alphas: "0.5,1,2"   # MUST match eval/tap_ablation.py's default: the notebook
+                     # passed no --alphas, so the frozen artifact has 0.5,1,2.
+                     # Dropping 2 empties every by_alpha.2 block and makes the
+                     # at_rate interpolation return NaN. See docs/findings/.
+pretrained: inputs/edge_pretrained.json
+out: tier1_tap_ablation.json
